@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         Move(movementX);
         checkYVelocity();
-
+        updateValues();
     }
     public void onUpdateValues(InputAction.CallbackContext ctx)
     {
