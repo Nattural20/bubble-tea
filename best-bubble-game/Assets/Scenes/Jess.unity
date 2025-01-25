@@ -2694,6 +2694,10 @@ PrefabInstance:
       propertyPath: detector
       value: 
       objectReference: {fileID: 613747533}
+    - target: {fileID: 1174270961390824417, guid: b71f76db50270884ea8c06eec2ffaa8a, type: 3}
+      propertyPath: threshold
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8248452320284738117, guid: b71f76db50270884ea8c06eec2ffaa8a, type: 3}
       propertyPath: m_Name
       value: Player

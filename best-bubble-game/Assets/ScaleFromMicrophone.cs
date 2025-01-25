@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ScaleFromMicrophone : MonoBehaviour
@@ -7,6 +8,8 @@ public class ScaleFromMicrophone : MonoBehaviour
     public Vector3 maxScale;
     public AudioLoudnessDetection detector;
     private Vector3 scaleChange;
+
+    public SpringJoint2D[] springs;
 
     public float loudnessSensibility = 100;
     public float threshold = 0.1f;
@@ -41,8 +44,12 @@ public class ScaleFromMicrophone : MonoBehaviour
         {
             //if ()
             //{
-                transform.transform.localScale += new Vector3(+0.01f, +0.01f, 0);
+            transform.transform.localScale += new Vector3(+0.001f, +0.001f, 0);
 
+            foreach (var spring in springs)
+            {
+                spring.distance += .01f;
+            }
             //}
             //else
             //{

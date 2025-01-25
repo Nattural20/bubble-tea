@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float angularDrag;
     [SerializeField] float gravity;
 
+    public SpringJoint2D[] springs;
+
     public bool deflate = false;
 
     private InputAction inputAction;
@@ -147,7 +149,10 @@ public class PlayerController : MonoBehaviour
     {
         if (bubble.transform.localScale.y > minScale.y)
         {
-            bubble.transform.localScale += new Vector3(-0.1f, -0.1f, 0);
+            foreach (var spring in springs)
+            {
+                spring.distance -= .01f;
+            }
         }
     }
 }
