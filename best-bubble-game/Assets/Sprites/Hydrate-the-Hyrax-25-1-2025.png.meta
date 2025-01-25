@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hydrate-the-Hyrax-25-1-2025_0: 9029045302843743394
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
