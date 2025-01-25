@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float gravity;
 
     public SpringJoint2D[] springs;
+	public GameObject[] points;
+	public GameObject hirax;
 
     public bool deflate = false;
 
@@ -45,7 +47,25 @@ public class PlayerController : MonoBehaviour
         {
             Deflate();
         }
+		
+		FindCenter();
     }
+	
+	public void FindCenter()
+	{
+		var sumX = 0.0f;
+		var sumY = 0.0f;
+		
+		foreach(var point in points)
+		{
+			sumX += point.transform.position.x;
+			sumY += point.transform.position.y;
+		}
+		
+		hirax.transform.position = new Vector2(sumX / 8.0f, sumY / 8.0f);
+		
+		
+	}
 
     public void onUpdateValues(InputAction.CallbackContext ctx)
     {
