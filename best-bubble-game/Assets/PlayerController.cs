@@ -132,6 +132,6 @@ public class PlayerController : MonoBehaviour
 
     public void Deflate()
     {
-        bubble.transform.localScale += new Vector3(-0.01f, -0.01f, 0);
+        bubble.transform.localScale += new Vector3(-0.1f, -0.1f, 0);
     }
 }
