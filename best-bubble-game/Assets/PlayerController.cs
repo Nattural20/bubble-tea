@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float angularDrag;
     [SerializeField] float gravity;
 
+    public bool deflate = false;
+
     private InputAction inputAction;
 
     public GameObject bubble;
@@ -36,6 +38,11 @@ public class PlayerController : MonoBehaviour
         Move(movementX);
         checkYVelocity();
         updateValues();
+
+        if (deflate == true) 
+        {
+            Deflate();
+        }
     }
 
     public void onUpdateValues(InputAction.CallbackContext ctx)
@@ -54,7 +61,6 @@ public class PlayerController : MonoBehaviour
         rb.linearDamping = linearDrag;
         rb.angularDamping = angularDrag;
         rb.gravityScale = gravity;
-        //Inflate();
     }
 
     // OnMove is called with the movement button is pressed
@@ -124,11 +130,17 @@ public class PlayerController : MonoBehaviour
 
     public void OnDeflate(InputAction.CallbackContext ctx)
     {
+
         if (ctx.performed)
         {
-            Deflate();
+            deflate = true;
             Debug.Log("Deflatin!");
         }
+        else if (ctx.canceled)
+        {
+            deflate = false;
+        }
+
     }
 
     public void Deflate()
