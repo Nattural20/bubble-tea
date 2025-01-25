@@ -166,7 +166,7 @@ MonoBehaviour:
   source: {fileID: 0}
   minScale: {x: 0, y: 0, z: 0}
   maxScale: {x: 0, y: 0, z: 0}
-  detector: {fileID: 0}
+  detector: {fileID: 4639195393706722815}
   loudnessSensibility: 100
   threshold: 0.1
 --- !u!58 &1167586231061934960
@@ -513,6 +513,7 @@ MonoBehaviour:
   angularDrag: 1
   gravity: -4
   bubble: {fileID: 3115774619206296867}
+  minScale: {x: 1.1, y: 1.1, z: 0}
 --- !u!114 &2874032332014207250
 MonoBehaviour:
   m_ObjectHideFlags: 0

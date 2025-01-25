@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private InputAction inputAction;
 
     public GameObject bubble;
+    public Vector3 minScale;
 
     void Start()
     {
@@ -132,6 +133,9 @@ public class PlayerController : MonoBehaviour
 
     public void Deflate()
     {
-        bubble.transform.localScale += new Vector3(-0.1f, -0.1f, 0);
+        if (bubble.transform.localScale.y > minScale.y)
+        {
+            bubble.transform.localScale += new Vector3(-0.1f, -0.1f, 0);
+        }
     }
 }
