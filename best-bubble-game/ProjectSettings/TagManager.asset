@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - trigger_1
+  - trigger_2
+  - trigger_3
   layers:
   - Default
   - TransparentFX
