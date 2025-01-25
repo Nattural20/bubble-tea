@@ -27,10 +27,10 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cam1.transform.position = new Vector3(-7, player.transform.position.y, -10);
-        cam2.transform.position = new Vector3(12, player.transform.position.y, -10);
-        cam3.transform.position = new Vector3(31, player.transform.position.y, -10);
-        cam4.transform.position = new Vector3(50, player.transform.position.y, -10);
+        cam1.transform.position = new Vector3(-7, player.transform.position.y, -30);
+        cam2.transform.position = new Vector3(12, player.transform.position.y, -30);
+        cam3.transform.position = new Vector3(31, player.transform.position.y, -30);
+        cam4.transform.position = new Vector3(50, player.transform.position.y, -30);
     }
 
     void OnTriggerEnter2D(Collider2D trigger)
