@@ -23,16 +23,20 @@ public class PlayerController : MonoBehaviour
 
     private InputAction inputAction;
 
+    public GameObject bubble;
+
     void Start()
     {
         updateValues();
     }
+
     private void FixedUpdate()
     {
         Move(movementX);
         checkYVelocity();
         updateValues();
     }
+
     public void onUpdateValues(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)
@@ -40,6 +44,7 @@ public class PlayerController : MonoBehaviour
             updateValues();
         }
     }
+
     public void updateValues()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,8 +53,8 @@ public class PlayerController : MonoBehaviour
         rb.linearDamping = linearDrag;
         rb.angularDamping = angularDrag;
         rb.gravityScale = gravity;
+        //Inflate();
     }
-
 
     // OnMove is called with the movement button is pressed
     public void OnMove(InputAction.CallbackContext ctx)
@@ -116,4 +121,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnDeflate(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            Deflate();
+            Debug.Log("Deflatin!");
+        }
+    }
+
+    public void Deflate()
+    {
+        bubble.transform.localScale += new Vector3(-0.01f, -0.01f, 0);
+    }
 }
