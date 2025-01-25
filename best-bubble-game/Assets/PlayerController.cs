@@ -147,12 +147,20 @@ public class PlayerController : MonoBehaviour
 
     public void Deflate()
     {
-        if (bubble.transform.localScale.y > minScale.y)
-        {
-            foreach (var spring in springs)
-            {
-                spring.distance -= .01f;
-            }
-        }
+    //    if (bubble.transform.localScale.y > minScale.y)
+      //  {
+        //    foreach (var spring in springs)
+          //  {
+            //    spring.distance -= .01f;
+            //}
+        //}
+		
+		//if (bubble.transform.localScale.y > minScale.y)
+        //{
+			foreach (var spring in springs)
+			{
+				spring.distance -= .01f;
+			}
+		//}
     }
 }

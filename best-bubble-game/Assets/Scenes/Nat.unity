@@ -3182,7 +3182,71 @@ MonoBehaviour:
   linearDrag: 0
   angularDrag: 0
   gravity: -4
-  springs: []
+  springs:
+  - {fileID: 66612590}
+  - {fileID: 406329794}
+  - {fileID: 572385330}
+  - {fileID: 957220596}
+  - {fileID: 1473167713}
+  - {fileID: 1629712130}
+  - {fileID: 1929777035}
+  - {fileID: 1945965782}
+  - {fileID: 66612589}
+  - {fileID: 406329793}
+  - {fileID: 572385329}
+  - {fileID: 957220595}
+  - {fileID: 1473167712}
+  - {fileID: 1629712129}
+  - {fileID: 1929777034}
+  - {fileID: 1945965781}
+  - {fileID: 66612588}
+  - {fileID: 406329792}
+  - {fileID: 572385328}
+  - {fileID: 957220594}
+  - {fileID: 1473167711}
+  - {fileID: 1629712128}
+  - {fileID: 1929777033}
+  - {fileID: 1945965780}
+  - {fileID: 66612587}
+  - {fileID: 406329791}
+  - {fileID: 572385327}
+  - {fileID: 957220593}
+  - {fileID: 1473167710}
+  - {fileID: 1629712127}
+  - {fileID: 1929777032}
+  - {fileID: 1945965779}
+  - {fileID: 66612586}
+  - {fileID: 406329790}
+  - {fileID: 572385326}
+  - {fileID: 957220592}
+  - {fileID: 1473167709}
+  - {fileID: 1629712126}
+  - {fileID: 1929777031}
+  - {fileID: 1945965778}
+  - {fileID: 66612585}
+  - {fileID: 406329789}
+  - {fileID: 572385325}
+  - {fileID: 957220591}
+  - {fileID: 1473167708}
+  - {fileID: 1629712125}
+  - {fileID: 1929777030}
+  - {fileID: 1945965777}
+  - {fileID: 66612584}
+  - {fileID: 406329788}
+  - {fileID: 572385324}
+  - {fileID: 957220590}
+  - {fileID: 1473167707}
+  - {fileID: 1629712124}
+  - {fileID: 1929777029}
+  - {fileID: 1945965776}
+  - {fileID: 66612591}
+  - {fileID: 406329795}
+  - {fileID: 572385331}
+  - {fileID: 957220597}
+  - {fileID: 1473167714}
+  - {fileID: 1629712131}
+  - {fileID: 1929777036}
+  - {fileID: 1945965783}
   deflate: 0
   bubble: {fileID: 968515042}
   minScale: {x: 0.5, y: 0.5, z: 0}

@@ -44,7 +44,7 @@ public class ScaleFromMicrophone : MonoBehaviour
         {
             //if ()
             //{
-            transform.transform.localScale += new Vector3(+0.001f, +0.001f, 0);
+            //transform.transform.localScale += new Vector3(+0.001f, +0.001f, 0);
 
             foreach (var spring in springs)
             {

@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Jump",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "200a64e2-821a-44fa-a66d-ed0616d68c0c",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Deflate",
