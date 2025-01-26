@@ -9,6 +9,7 @@ TagManager:
   - trigger_3
   - above_water
   - under_water
+  - trigger_4
   layers:
   - Default
   - TransparentFX
