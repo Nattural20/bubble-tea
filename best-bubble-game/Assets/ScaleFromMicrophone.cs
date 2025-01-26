@@ -10,6 +10,7 @@ public class ScaleFromMicrophone : MonoBehaviour
     private Vector3 scaleChange;
 
     public SpringJoint2D[] springs;
+    public SpringJoint2D testingSpring;
 
     public float loudnessSensibility = 100;
     public float threshold = 0.1f;
@@ -42,14 +43,18 @@ public class ScaleFromMicrophone : MonoBehaviour
         float loudness = detector.GetLoudnessFromMicrophone() * loudnessSensibility;
         if (loudness > threshold)
         {
+            if (testingSpring.distance! < 4)
+            {
+                foreach (var spring in springs)
+                {
+                    spring.distance += .01f;
+                }
+            }
             //if ()
             //{
             //transform.transform.localScale += new Vector3(+0.001f, +0.001f, 0);
 
-            foreach (var spring in springs)
-            {
-                spring.distance += .01f;
-            }
+            
             //}
             //else
             //{

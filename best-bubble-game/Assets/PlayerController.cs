@@ -43,6 +43,8 @@ public class OnCollisionEnter : MonoBehaviour
     public AudioSource bubbleDeflate;
     public AudioSource bubbleCollide;
 
+    public SpringJoint2D testingSpring;
+
     void Start()
     {
         updateValues();
@@ -56,8 +58,11 @@ public class OnCollisionEnter : MonoBehaviour
 
         if (deflate == true) 
         {
-            Deflate();
-            Debug.Log("sound should be here");
+            if (testingSpring.distance! > 1) 
+            {
+                Deflate();
+                Debug.Log("sound should be here");
+            } 
         }
 		
 		FindCenter();
@@ -143,7 +148,7 @@ public class OnCollisionEnter : MonoBehaviour
 
     public void OnDown(InputAction.CallbackContext ctx)
     {
-        movementY = ctx.ReadValue<Vector2>().y;
+        if(ctx.performed);
     }
 
     public void Down(float direction) 
@@ -248,7 +253,7 @@ public class OnCollisionEnter : MonoBehaviour
         PlaySound(bubbleDeflate, 1);
         foreach (var spring in springs)
 			{
-				spring.distance -= .01f;
+                spring.distance -= .01f;
 			}
 		//}
     }
