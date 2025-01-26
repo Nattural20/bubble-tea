@@ -2220,7 +2220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7896456135223576650}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.030343, y: -0.10853, z: 0}
   m_LocalScale: {x: 0.43994707, y: 0.43994707, z: 0.43994707}
   m_ConstrainProportionsScale: 0
@@ -2429,6 +2429,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 589db8e0-4906-437e-a9d2-c64afee15b1d
     m_ActionName: 'Player/Deflate[/DualSenseGamepadHID/leftTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0d441c5f-01c8-4495-af48-0e1605386d4e
+    m_ActionName: 'Player/Reset[/DualSenseGamepadHID/select]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 48a9b062-2e34-4757-a007-33d3c5984010
+    m_ActionName: 'Player/Down[/DualSenseGamepadHID/leftStick/up,/DualSenseGamepadHID/leftStick/down,/DualSenseGamepadHID/leftStick/left,/DualSenseGamepadHID/leftStick/right]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -2455,6 +2463,7 @@ MonoBehaviour:
   linearDrag: 0
   angularDrag: 0
   gravity: -4
+  velocity: 0
   springs:
   - {fileID: 3330690613825177987}
   - {fileID: 5573522007754276862}
@@ -2533,6 +2542,11 @@ MonoBehaviour:
   deflate: 0
   bubble: {fileID: 7896456135223576650}
   minScale: {x: 0.5, y: 0.5, z: 0}
+  listener: {fileID: 0}
+  hyraxDeath: {fileID: 0}
+  bubbleDeflate: {fileID: 0}
+  bubbleCollide: {fileID: 0}
+  testingSpring: {fileID: 7643710740383404730}
 --- !u!247 &1706273107172386188
 ConstantForce2D:
   m_ObjectHideFlags: 0
@@ -2625,6 +2639,7 @@ MonoBehaviour:
   - {fileID: 1204414559633974595}
   - {fileID: 6446978347512396652}
   - {fileID: 6404201882776904140}
+  testingSpring: {fileID: 7643710740383404730}
   loudnessSensibility: 100
   threshold: 10
 --- !u!114 &6639405277704837624
