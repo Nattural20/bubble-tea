@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class OnCollisionEnter : MonoBehaviour
 {
     private Rigidbody2D rb;
     private ConstantForce2D cf;
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float angularDrag;
     [SerializeField] float gravity;
 
+    public float velocity; 
+
     private float updateGravity;
 
     public SpringJoint2D[] springs;
@@ -34,6 +37,11 @@ public class PlayerController : MonoBehaviour
 
     public GameObject bubble;
     public Vector3 minScale;
+
+    public AudioListener listener;
+    public AudioSource hyraxDeath;
+    public AudioSource bubbleDeflate;
+    public AudioSource bubbleCollide;
 
     void Start()
     {
@@ -49,11 +57,33 @@ public class PlayerController : MonoBehaviour
         if (deflate == true) 
         {
             Deflate();
+            Debug.Log("sound should be here");
         }
 		
 		FindCenter();
+
+        if (rb.linearVelocityY < 15) 
+        {
+            StartCoroutine(PlaySound(hyraxDeath, 3));
+        }
     }
-	
+
+    /*public OnCollisionEnter(Collider2D collider)
+    {
+        if (collider.gameObject.layer == 6) 
+        {
+            Debug.Log("bloop");
+            PlaySound(bubbleCollide, 1);
+        }
+        
+    }*/
+
+    public IEnumerator PlaySound(AudioSource audio, float time) 
+    {
+        audio.Play();
+        yield return new WaitForSeconds(time);
+    }
+
 	public void FindCenter()
 	{
 		var sumX = 0.0f;
@@ -109,6 +139,16 @@ public class PlayerController : MonoBehaviour
     {
         movementX = ctx.ReadValue<Vector2>().x;
         //Debug.Log(moveDirection);
+    }
+
+    public void OnDown(InputAction.CallbackContext ctx)
+    {
+        movementY = ctx.ReadValue<Vector2>().y;
+    }
+
+    public void Down(float direction) 
+    {
+        rb.linearVelocity = new Vector2(movementX * moveSpeed, rb.linearVelocity.y + 100);
     }
 
     // Move is called on Update and controls actual direction
@@ -195,17 +235,18 @@ public class PlayerController : MonoBehaviour
 
     public void Deflate()
     {
-    //    if (bubble.transform.localScale.y > minScale.y)
-      //  {
+        //    if (bubble.transform.localScale.y > minScale.y)
+        //  {
         //    foreach (var spring in springs)
-          //  {
-            //    spring.distance -= .01f;
-            //}
+        //  {
+        //    spring.distance -= .01f;
         //}
-		
-		//if (bubble.transform.localScale.y > minScale.y)
+        //}
+
+        //if (bubble.transform.localScale.y > minScale.y)
         //{
-			foreach (var spring in springs)
+        PlaySound(bubbleDeflate, 1);
+        foreach (var spring in springs)
 			{
 				spring.distance -= .01f;
 			}
