@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float angularDrag;
     [SerializeField] float gravity;
 
+    private float updateGravity;
+
     public SpringJoint2D[] springs;
 	public GameObject[] points;
 	public GameObject hirax;
@@ -63,9 +65,20 @@ public class PlayerController : MonoBehaviour
 		}
 		
 		hirax.transform.position = new Vector2(sumX / 8.0f, sumY / 8.0f);
-		
-		
 	}
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "above_water")
+        {
+            this.gravity = -gravity;
+        }
+
+        /*if (collision.tag == "under_water")
+        {
+            this.gravity = -gravity;
+        }*/
+    }
 
     public void onUpdateValues(InputAction.CallbackContext ctx)
     {
