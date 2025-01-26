@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: plat_pillar_end_0
+  m_Name: plat_pillar_3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -2239133815043836108, guid: f437aea56accf544585446db95579754, type: 3}
-  m_Color: {r: 1, g: 0.66981125, b: 0.97128797, a: 1}
+  m_Sprite: {fileID: -5156937684543901264, guid: 3e8d3c27a4d638c409c6e4601b6166de, type: 3}
+  m_Color: {r: 0.29526025, g: 0.27835128, b: 0.38993704, a: 1}
   m_Transform:
     e00: 1
     e01: 0

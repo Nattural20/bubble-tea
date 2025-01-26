@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: plat_pillar_broken_1
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 3598768761574300498, guid: 778209f3b7fdfa74d9077e63f86c3605, type: 3}
-  m_Color: {r: 1, g: 0.47484267, b: 0.7982731, a: 1}
+  m_Color: {r: 1, g: 0.66981125, b: 0.97128797, a: 1}
   m_Transform:
     e00: 1
     e01: 0

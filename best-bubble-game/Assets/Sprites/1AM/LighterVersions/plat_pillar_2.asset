@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: plat_pillar_2
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: -5156937684543901264, guid: 3e8d3c27a4d638c409c6e4601b6166de, type: 3}
-  m_Color: {r: 1, g: 0.5629491, b: 0.26729542, a: 1}
+  m_Color: {r: 0.40238905, g: 0.2971203, b: 0.52201253, a: 1}
   m_Transform:
     e00: 1
     e01: 0
