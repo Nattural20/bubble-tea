@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      coral_green_0: -181932929730027461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
