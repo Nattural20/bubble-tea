@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -67,6 +68,11 @@ public class PlayerController : MonoBehaviour
 		hirax.transform.position = new Vector2(sumX / 8.0f, sumY / 8.0f);
 	}
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "above_water")
@@ -120,6 +126,15 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
             Debug.Log("Jump!");
+        }
+    }
+
+    public void OnReload(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            ReloadScene();
+            Debug.Log("Reloadin!");
         }
     }
 

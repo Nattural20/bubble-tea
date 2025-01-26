@@ -251,6 +251,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6391722868457923846, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6719275789995869955, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
       propertyPath: m_Name
       value: cam_2
@@ -301,9 +305,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8683690632919516307, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
       propertyPath: orthographic size
-      value: 4.71
+      value: 5.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 383685003843067395, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -450,6 +455,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6391722868457923846, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6719275789995869955, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
       propertyPath: m_Name
       value: cam_3
@@ -500,9 +509,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8683690632919516307, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
       propertyPath: orthographic size
-      value: 4.71
+      value: 5.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 383685003843067395, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28738,6 +28748,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 0d441c5f-01c8-4495-af48-0e1605386d4e
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: 'Player/Reset[/DualSenseGamepadHID/select]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1091552930}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnReload
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113978735162252814, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28748,6 +28798,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7896456135223576650, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
   m_PrefabInstance: {fileID: 1091552925}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1091552930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1595821756401644224, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
+  m_PrefabInstance: {fileID: 1091552925}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091552926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef198ce3fe0cf0d47a019b9f7d9fbbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1118861168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7964039391258749657, guid: 09187bf26d1f5e9419592772b4821ed5, type: 3}
@@ -28858,6 +28919,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6391722868457923846, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6719275789995869955, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
       propertyPath: m_Name
       value: cam_1
@@ -28908,9 +28973,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8683690632919516307, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
       propertyPath: orthographic size
-      value: 4.71
+      value: 5.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 383685003843067395, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29355,6 +29421,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6391722868457923846, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6719275789995869955, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
       propertyPath: m_Name
       value: cam_4
@@ -29405,9 +29475,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8683690632919516307, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
       propertyPath: orthographic size
-      value: 4.71
+      value: 5.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 383685003843067395, guid: 0fee1cc1607bc8d4f98f50c01e6e3949, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
